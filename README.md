@@ -15,6 +15,7 @@
 ### Flow
 
 - Users can call the `API SERVICE` (with an API KEY) to send an email report
+- The `API SERVICE` fetches a JWT token for internal use thereby validating the given API KEY
 - The `API SERVICE` then calls the `CALCULATION SERVICE` with the parameters from the user's request
 - The `CALCULATION SERVICE` fetches DATA from the `DATA SERVICE` depending on the given parameters
 - The `CALCULATION SERVICE` performs calculations on the DATA and calls the `EMAIL SERVICE` with the REPORT DATA
@@ -24,7 +25,7 @@
 ### Questions
 
 - What kind of tests would be suitable for the above scenario?
-- In what stages should the tests run?
+- In what stages of the delivery pipeline should the tests run?
 - Developer D makes a change in the `DATA SERVICE`, how can he ensure his change does not break the flow?
 
 ## Programming test
