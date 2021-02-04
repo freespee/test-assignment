@@ -2,7 +2,7 @@
 
 ## Test scenario
 
-![](https://i.imgur.com/WkNAhXu.png)
+![](https://i.imgur.com/JoW4Teg.png)
 
 ### General
 
