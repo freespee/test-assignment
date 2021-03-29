@@ -85,7 +85,7 @@ function capitalizeName(name: string): string {
 - If so, what would the different test cases be (input/expected output)?
 
 ```typescript
-function countOccurencesInSubject(subject: string, lookFor: string): string {
+function countOccurencesInSubject(subject: string, lookFor: string): number {
   let occurences = 0;
 
   subject.split('').forEach(character => {
