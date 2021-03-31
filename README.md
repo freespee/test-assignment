@@ -24,9 +24,10 @@
 
 ### Questions
 
-- What kind of tests would be suitable for the above scenario?
-- In what stages of the delivery pipeline should the tests run?
-- Developer D makes a change in the `DATA SERVICE`, how can he ensure his change does not break the flow?
+- If time is limited and we can only test things one way for each service (API/E2E/Unit/UI/Manual) what kind of test should each service have. 
+- In what stages (on commit/on merge/on staging deploy/on production deploy) of the delivery pipeline should the tests run?
+- Can the services (or their requests/responses) be modified to make the flow easier to test?
+- Developer `Klaus` makes a change in the `DATA SERVICE`, how can he ensure his change does not break the flow?
 
 ## Programming test
 
@@ -79,21 +80,3 @@ function capitalizeName(name: string): string {
 }
 ```
 
-### countOccurencesInSubject
-
-- Is this function important to test?
-- If so, what would the different test cases be (input/expected output)?
-
-```typescript
-function countOccurencesInSubject(subject: string, lookFor: string): number {
-  let occurences = 0;
-
-  subject.split('').forEach(character => {
-    if (character === lookFor) {
-      occurences++;
-    }
-  });
-
-  return occurences;
-}
-```
