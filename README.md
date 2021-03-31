@@ -9,18 +9,18 @@
 - The individual services are separate NodeJS applications
 - `AUTH SERVICE` is being used by multiple other services, it is responsible for validating API keys and translating those into JWT that are used internally between other services. The JWT tokens can be validated autonomously by the services themselves.
 - `DATA SERVICE` is being used by multiple other services, it is responsible for fetching data from databases and other relevant places (such as Redis, Logs etc).
-- API KEY is used as authentication in the public facing service (`API SERVICE`)
-- JWT TOKEN is used as authentication in the internal services (`CALCULATION SERVICE`, `DATA SERVICE`, `EMAIL SERVICE`)
+- `API KEY` is used as authentication in the public facing service (`API SERVICE`)
+- `JWT TOKEN` is used as authentication in the internal services (`CALCULATION SERVICE`, `DATA SERVICE`, `EMAIL SERVICE`)
 
 ### Flow
 
 - Users can call the `API SERVICE` (with an API KEY) to send an email report
 - The `API SERVICE` fetches a JWT token for internal use thereby validating the given API KEY
 - The `API SERVICE` then calls the `CALCULATION SERVICE` with the parameters from the user's request
-- The `CALCULATION SERVICE` fetches DATA from the `DATA SERVICE` depending on the given parameters
-- The `CALCULATION SERVICE` performs calculations on the DATA and calls the `EMAIL SERVICE` with the REPORT DATA
-- The `EMAIL SERVICE` takes the REPORT DATA and builds up an HTML EMAIL which it sends to the THIRD PARTY EMAIL PROVIDER
-- The THIRD PARTY EMAIL PROVIDER delivers the HTML EMAIL to the USER EMAIL INBOX
+- The `CALCULATION SERVICE` fetches data from the `DATA SERVICE` depending on the given parameters
+- The `CALCULATION SERVICE` performs calculations on the data and calls the `EMAIL SERVICE` with the REPORT DATA
+- The `EMAIL SERVICE` takes the REPORT DATA and builds up an HTML email which it sends to the `THIRD PARTY EMAIL PROVIDER`
+- The `THIRD PARTY EMAIL PROVIDER` delivers the HTML email to the `USER EMAIL INBOX`
 
 ### Questions
 
