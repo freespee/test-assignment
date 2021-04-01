@@ -24,8 +24,10 @@
 
 ### Questions
 
-- If time is limited and we can only test things one way for each service (API/E2E/Unit/UI/Manual) what kind of test should each service have. 
+- If time is limited and we can only test things one way for each service (API/E2E/Unit/UI/Manual) what kind of test should each service have?
+- What tools would you use to implement those tests in the CI/CD pipeline as well as the developer workflows?
 - In what stages (on commit/on merge/on staging deploy/on production deploy) of the delivery pipeline should the tests run?
+- What actions should the system perform if any of the above mentioned tests fail?
 - Can the services (or their requests/responses) be modified to make the flow easier to test?
 - Developer `Klaus` makes a change in the `DATA SERVICE`, how can he ensure his change does not break the flow?
 
