@@ -54,7 +54,7 @@ async function downloadFile(
     path = `/downloads/${filename}`;
   }
 
-  const result = await downloadService.downloadFile(fileUrl, path);
+  const result = await downloadService.downloadRemoteFile(fileUrl, path);
 
   if (sendReceipt) {
     await emailService.emailDownloadReceipt(result.receipt, user.email);
